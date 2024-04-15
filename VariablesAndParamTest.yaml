@@ -34,6 +34,10 @@ stages:
       
     - script: echo My variable value is $(myVar)
       displayName: 'My Variable'
+      
+    - script: echo My variable set through GUI value is $(myguivar)
+      displayName: 'My GUI Variable'
+
 
     - script: |
         echo System Variable BuildNumber is $(Build.BuildNumber) and $(Build.BuildId)
