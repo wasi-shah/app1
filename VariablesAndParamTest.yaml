@@ -72,6 +72,17 @@ stages:
 
     - script: |
        echo ENv variable Agent Name is $(Agent.Name)
+       echo "Agent Information:"
+       echo "------------------"
+       echo "Agent.Name: $(Agent.Name)"
+       echo "Agent.OS: $(Agent.OS)"
+       echo "Agent.Version: $(Agent.Version)"
+       echo "Agent.WorkFolder: $(Agent.WorkFolder)"
+       echo "Agent.ToolsDirectory: $(Agent.ToolsDirectory)"
+       echo "Agent.TempDirectory: $(Agent.TempDirectory)"
+       echo "Agent.HomeDirectory: $(Agent.HomeDirectory)"
+       echo "Agent.ContainerId: $(Agent.ContainerId)"
+       echo "------------------"
       displayName: 'My Env variables'
 
     - script: |
