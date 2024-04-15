@@ -38,6 +38,9 @@ stages:
     - script: echo My variable set through GUI value is $(myguivar)
       displayName: 'My GUI Variable'
 
+    - script: echo My secret set through GUI value is $(myguisecret)
+      displayName: 'My GUI Secret'
+
 
     - script: |
         echo System Variable BuildNumber is $(Build.BuildNumber) and $(Build.BuildId)
