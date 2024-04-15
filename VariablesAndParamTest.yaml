@@ -38,5 +38,9 @@ stages:
     - script: echo System Variable BuildNumber is $(Build.BuildNumber) and $(Build.BuildId)
       displayName: 'My System variables'
 
-    - script: echo ENv variable Agent Name is $(Agent.Name)
+    - script: |
+          echo ENv variable Agent Name is $(Agent.Name)
+          echo "Environment Variables:"
+          echo "------------------"
+          printenv
       displayName: 'My Env variables'
