@@ -17,7 +17,6 @@ parameters:
   - macOS-latest
 
 variables:
-  group: MyNewVariableGroup
   myVar: "My Data"
 
 
@@ -28,6 +27,8 @@ stages:
   - job: TestJob
     displayName: Test-Job Sample Name
     pool: Default
+    variables:
+     group: MyNewVariableGroup
     steps:
     - script: echo My parameter value is ${{ parameters.image }}
       displayName: 'My Parameters'
