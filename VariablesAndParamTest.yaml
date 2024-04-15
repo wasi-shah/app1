@@ -18,7 +18,7 @@ parameters:
 
 variables:
   myVar: "My Data"
-  tag: '$(Build.BuildId)'
+
 
 
 stages:
@@ -29,8 +29,11 @@ stages:
     displayName: Test-Job Sample Name
     pool: Default
     steps:
-    - script: echo Display parameter value ${{ parameters.image }}
-      displayName: 'Display parameter script'
+    - script: echo My parameter value is ${{ parameters.image }}
+      displayName: 'My Parameters'
+      
+    - script: echo My variable value is ${{ parameters.image }}
+      displayName: 'My Variable'
 
-    - script: echo building $(Build.BuildNumber)
-      displayName: 'Build script'
+    - script: echo System Vriable BuildNumber is $(Build.BuildNumber) and $(Build.BuildId)
+      displayName: 'My System variables'
