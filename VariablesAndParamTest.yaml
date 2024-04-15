@@ -39,8 +39,12 @@ stages:
       displayName: 'My System variables'
 
     - script: |
-          echo ENv variable Agent Name is $(Agent.Name)
-          echo "Environment Variables:"
-          echo "------------------"
-          printenv
+       echo ENv variable Agent Name is $(Agent.Name)
       displayName: 'My Env variables'
+
+    - script: |
+        # Display the directory structure of $(Agent.Name) / $(Agent.BuildDirectory) recursively
+        tree $(Agent.BuildDirectory)
+        echo "----------------------"
+        ls -la $(Build.SourcesDirectory)
+      displayName: 'Display the directory structure'
