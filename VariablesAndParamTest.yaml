@@ -42,7 +42,7 @@ stages:
     - script: echo My secret set through GUI value is $(myguisecret)
       displayName: 'My GUI Secret'
 
-    - script: echo My variable from a variable group set through GUI value is $(myvariableinsideagroup)
+    - script: echo My variable from a variable group set through GUI value is $(MyNewVariableGroup.myvariableinsideagroup)
       displayName: 'My GUI group variable '
       
 
