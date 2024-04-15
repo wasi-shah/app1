@@ -83,7 +83,11 @@ stages:
        echo "Agent.HomeDirectory: $(Agent.HomeDirectory)"
        echo "Agent.ContainerId: $(Agent.ContainerId)"
        echo "------------------"
+       echo "Other variables:"
+       echo "env:HOME: $(env:HOME)"
+       echo "------------------"
       displayName: 'My Env variables'
+
 
     - script: |
         # Display the directory structure of $(Agent.Name) / $(Agent.BuildDirectory) recursively
