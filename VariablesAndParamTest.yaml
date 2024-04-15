@@ -37,7 +37,7 @@ stages:
 
     - script: |
         echo System Variable BuildNumber is $(Build.BuildNumber) and $(Build.BuildId)
-        echo "Pipeline Information:"
+        echo "System Pipeline Information:"
         echo "---------------------"
         echo "Azure DevOps Organization: $(System.CollectionUri)"
         echo "Azure DevOps Project: $(System.TeamProject)"
