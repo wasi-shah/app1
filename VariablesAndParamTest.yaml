@@ -86,6 +86,7 @@ stages:
        echo "Other variables:"
        echo "env:HOME: $(env:HOME)"
        echo "------------------"
+       set
       displayName: 'My Env variables'
 
 
