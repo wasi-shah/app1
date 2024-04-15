@@ -17,6 +17,7 @@ parameters:
   - macOS-latest
 
 variables:
+  group: MyNewVariableGroup
   myVar: "My Data"
 
 
