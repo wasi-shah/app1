@@ -46,5 +46,7 @@ stages:
         # Display the directory structure of $(Agent.Name) / $(Agent.BuildDirectory) recursively
         tree $(Agent.BuildDirectory)
         echo "----------------------"
-        ls -la $(Build.SourcesDirectory)
+        # ls -la $(Build.SourcesDirectory)
+        cd $(Build.SourcesDirectory)
+        dir
       displayName: 'Display the directory structure'
