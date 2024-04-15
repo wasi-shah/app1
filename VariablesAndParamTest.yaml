@@ -22,12 +22,12 @@ variables:
 
 
 stages:
-- stage: Build
-  displayName: Build and push stage
+- stage: VariableTesting
+  displayName: Just a test to check how variable are set and access
   jobs:
-  - job: Build
-    displayName: Build
+  - job: TestJob
+    displayName: Test-Job Sample Name
     pool: Default
     steps:
-    - script: echo Hello, world!
+    - script: echo Display parameter value ${{ parameters.image }}
       displayName: 'Run a one-line script'
