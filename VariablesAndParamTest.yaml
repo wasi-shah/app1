@@ -32,7 +32,7 @@ stages:
     - script: echo My parameter value is ${{ parameters.image }}
       displayName: 'My Parameters'
       
-    - script: echo My variable value is ${{ parameters.image }}
+    - script: echo My variable value is ${myVar}
       displayName: 'My Variable'
 
     - script: echo System Vriable BuildNumber is $(Build.BuildNumber) and $(Build.BuildId)
