@@ -30,4 +30,5 @@ stages:
     pool: Default
     steps:
     - script: echo Display parameter value ${{ parameters.image }}
+    - script: echo building $(Build.BuildNumber)
       displayName: 'Run a one-line script'
